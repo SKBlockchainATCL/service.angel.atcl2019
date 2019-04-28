@@ -1,7 +1,7 @@
 #! /bin/bash
 
 readonly script_dir=$(cd `dirname $0` && pwd)
-readonly data_dir=${script_dir}/data/ethereum/ganache
+readonly data_dir=${script_dir}/../run/data/ethereum/ganache
 
 rm -Rf "${data_dir}"
 mkdir -p "${data_dir}"
@@ -17,5 +17,5 @@ ganache-cli --networkId 37 \
             --accounts 3 \
             --secure --unlock 0 --unlock 1 --unlock 2 \
             --defaultBalanceEther 1000000 \
-            --blocktime 0 \
+            --blockTime 0 \
             --db "${data_dir}"
