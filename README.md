@@ -7,7 +7,19 @@
 | Node.js  | 8.9.4       | 10.x ([Download Node.js LTS](https://nodejs.org/en/download/)) |   |
 
 
+### Version Compatibilities
+
+| Software | Version | Release Notes | Remarks |
+| -------- | ------- | ------------- | ------- |
+| web3.js  | 1.0.0-beta | https://github.com/ethereum/web3.js/releases/tag/v1.0.0-beta.52 |   |
+| solc-js  | 0.5.4 | https://github.com/ethereum/solc-js/releases/tag/v0.5.4
+| Truffle  | 5.0.14  | https://github.com/trufflesuite/truffle/releases/tag/v5.0.14 | Ganache Core 2.5.5  |
+| Ganache CLI | 6.4.3 | https://github.com/trufflesuite/ganache-cli/releases/tag/v6.4.3 | Ganache Core 2.5.5 |
+| Ganache Core | 2.5.5 | https://github.com/trufflesuite/ganache-core/releases/tag/v2.5.5 | 
+
 ### Using Ganache CLI for local lightweight standalone Ethereum client
+
+#### Starting local Ganache CLI instance
 
 The script expects Bash shell environment. 
 If you are using Mac, there would be no problem.
@@ -63,3 +75,26 @@ Gas Limit
 
 Listening on 127.0.0.1:8555
 ~~~~
+
+#### Exploring local Ganache CLI instance
+e
+For Windows, you should use `truffle.cmd` instead of `truffle` even though you are using Git Bash.
+
+~~~bash
+
+service.angel.atcl2019>truffle.cmd console --network local
+truffle(local)> web3.eth.getNodeInfo()
+'EthereumJS TestRPC/v2.5.5/ethereum-js'
+truffle(local)> web3.eth.getAccounts()
+[ '0xC5776C5d4ba76dD38424A160927c6B7054b55edD',
+  '0x99322780C19B664e9902Ff1031549da575De8F3B',
+  '0xf0f0717dB9387ea3B095dE1FF43786C63DC93e45' ]
+truffle(local)> web3.eth.getBlockNumber()
+0
+
+~~~
+
+
+### References
+
+* [`web3.js` 1.0 API](https://web3js.readthedocs.io/en/1.0/)
