@@ -7,7 +7,7 @@ require("babel-register")({
 const HDWalletProvider = require("truffle-hdwallet-provider");
 const mnemonic = "hell bent for leather";
 
-const fs = require('fs');
+//const fs = require('fs');
 
 //const accounts = fs.readFileSync('run/accounts').toString().split('\n');
 //const config = fs.readFileSync('scripts/quorum/solo/config.sh').toString();
@@ -26,12 +26,12 @@ module.exports = {
    contracts_build_directory: "./target/contracts",
 
    networks: {
-      local: {
+      development: {
          host: "127.0.0.1",
          port: 8555,
          network_id: 37,
-         from: 0xC5776C5d4ba76dD38424A160927c6B7054b55edD,
-         gas: 0x10000000
+         from: "0xc5776c5d4ba76dd38424a160927c6b7054b55edd",
+         gas: 0x40000
       },
    },
 

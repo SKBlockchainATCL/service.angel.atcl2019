@@ -16,7 +16,7 @@ cd "${script_dir}"
 ganache-cli --networkId 37 \
             --port 8555 \
             --gasPrice 20000000000 \
-            --gasLimit 90000 \
+            --gasLimit 900000 \
             --mnemonic "in rock machine head the dark side of the moon third stage" \
             --accounts 3 \
             --secure --unlock 0 --unlock 1 --unlock 2 \
