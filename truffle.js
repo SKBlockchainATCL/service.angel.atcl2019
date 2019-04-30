@@ -17,6 +17,11 @@ const networkId = config.match(/\[networkid\]=[0-9]*/g)[0].substring(12);
 module.exports = {
    // http://truffleframework.com/docs/advanced/configuration
     networks: {
+    	
+      local: {
+    	  host: ""
+      },
+      
       development: {
         host: "192.168.56.101",
         port: rpcPort,
@@ -32,7 +37,7 @@ module.exports = {
         return new HDWalletProvider(mnemonic, "https://ropsten.infura.io/Sqj6qg9ix47UK1EBQQb0");
       },
       network_id: 3,
-    }
+    },
     
     rinkeby: {
       provider: function(){
@@ -47,7 +52,7 @@ module.exports = {
       },
       network_id: 6,
     },
-
+ 
     solc: {
       optimizer: {
         enabled: true,
