@@ -17,7 +17,11 @@
 | Ganache CLI | 6.4.3 | https://github.com/trufflesuite/ganache-cli/releases/tag/v6.4.3 | Ganache Core 2.5.5 |
 | Ganache Core | 2.5.5 | https://github.com/trufflesuite/ganache-core/releases/tag/v2.5.5 | 
 
-### Using Ganache CLI for local lightweight standalone Ethereum client
+### Source Project Layout
+
+@TODO
+
+### Using Ganache CLI for Local Lightweight Standalone Ethereum Client
 
 #### Starting local Ganache CLI instance
 
@@ -94,6 +98,9 @@ truffle(local)> web3.eth.getBlockNumber()
 
 ~~~
 
+### Compiling, Deploying and Testing Sample Contract
+
+@TODO
 
 ### References
 
