@@ -18,7 +18,7 @@ CVS/
 /test-output/
 /reports/
 .apt_generated/
-package-lock.json
+!package-lock.json
 config.gypi
 npm-debug.log
 .npmrc
@@ -29,3 +29,4 @@ packer_cache/
 /**/._*
 /**/.cache*
 /**/.*.swp
+/**/*.md.html
