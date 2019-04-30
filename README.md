@@ -81,7 +81,7 @@ Listening on 127.0.0.1:8555
 ~~~~
 
 #### Exploring local Ganache CLI instance
-e
+
 For Windows, you should use `truffle.cmd` instead of `truffle` even though you are using Git Bash.
 
 ~~~bash
@@ -105,3 +105,6 @@ truffle(local)> web3.eth.getBlockNumber()
 ### References
 
 * [`web3.js` 1.0 API](https://web3js.readthedocs.io/en/1.0/)
+* [Truffle Documentation](https://truffleframework.com/docs/truffle/overview)
+* [Truffle Configuration](https://truffleframework.com/docs/truffle/reference/configuration)
+* [Truffle Commands](https://truffleframework.com/docs/truffle/reference/truffle-commands)
