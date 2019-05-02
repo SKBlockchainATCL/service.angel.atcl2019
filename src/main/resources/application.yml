@@ -1,3 +1,5 @@
+# https://docs.spring.io/spring-boot/docs/2.1.x/reference/html/common-application-properties.html
+
 foo:
   bar: "FOO.BAR"
 
@@ -5,4 +7,17 @@ credit:
   - Sangmoon Oh
   - Lim
   - Yang
-  
+
+management:
+  server:
+    address: '127.0.0.1'
+    port: 8088
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+ethereumNetworks:
+  local:
+    address: '127.0.0.1'
+    port: 8555
