@@ -10,7 +10,7 @@ cd "${script_dir}"
 
 # Ganache CLI : https://github.com/trufflesuite/ganache-cli#using-ganache-cli
 # BIP 32 : https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki
-# BIP 39 : https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki 
+# BIP 39 : https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki
 # private key candidate
 #   - b92c249c190dd162da9d28bf3e78a730f39444a9c8ead96d6b5616ec0f25b370
 ganache-cli --networkId 37 \
