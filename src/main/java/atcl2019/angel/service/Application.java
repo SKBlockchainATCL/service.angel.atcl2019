@@ -22,7 +22,7 @@ public class Application{
    }
 
    @Bean
-   public Web3j localGanacheCli(@Value("${ethereumNetworks.local.address}") @NotEmpty String addr,
+   public Web3j ethereum(@Value("${ethereumNetworks.local.address}") @NotEmpty String addr,
          @Value("${ethereumNetworks.local.port}") @Positive int port) {
       return this.buildWeb3j("http", addr, port);
    }
