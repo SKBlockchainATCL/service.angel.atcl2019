@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.springframework.ide.eclipse.boot.launch">
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/service.angel.atcl2019/src/main/java/atcl2019/angel/service/Application.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <mapAttribute key="org.eclipse.debug.core.environmentVariables">
+        <mapEntry key="log.level.spring" value="DEBUG"/>
+    </mapAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_CLASSPATH_ONLY_JAR" value="false"/>
+    <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.springframework.ide.eclipse.boot.launch.BootMavenClassPathProvider"/>
+    <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/CDC-1.0%Foundation-1.0"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="atcl2019.angel.service.Application"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="service.angel.atcl2019"/>
+    <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.springframework.ide.eclipse.boot.launch.BootMavenSourcePathProvider"/>
+    <stringAttribute key="process_factory_id" value="org.springframework.ide.eclipse.boot.launch.process.BootProcessFactory"/>
+    <stringAttribute key="spring.boot.app.properties" value=""/>
+    <booleanAttribute key="spring.boot.dash.hidden" value="false"/>
+    <booleanAttribute key="spring.boot.debug.enable" value="false"/>
+    <booleanAttribute key="spring.boot.fast.startup" value="false"/>
+    <booleanAttribute key="spring.boot.jmx.enable" value="true"/>
+    <booleanAttribute key="spring.boot.lifecycle.enable" value="true"/>
+    <stringAttribute key="spring.boot.lifecycle.termination.timeout" value="15000"/>
+    <booleanAttribute key="spring.boot.livebean.enable" value="false"/>
+    <stringAttribute key="spring.boot.livebean.port" value="0"/>
+    <stringAttribute key="spring.boot.profile" value=""/>
+</launchConfiguration>

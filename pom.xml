@@ -342,18 +342,18 @@
             <doctitle>${project.name} ${project.version} API</doctitle>
             <windowtitle>${project.name} ${project.version} API</windowtitle>
             <links>
-              <link>http://docs.oracle.com/javase/8/docs/api/</link>
-              <link>http://docs.oracle.com/javaee/6/api/</link>
-              <link>http://www.javadoc.io/doc/com.google.code.findbugs/jsr305/3.0.1</link>
-              <link>http://docs.jboss.org/hibernate/beanvalidation/spec/1.1/api/</link>
-              <link>http://docs.jboss.org/hibernate/validator/5.2/api/</link>
+              <link>https://docs.oracle.com/javase/9/docs/api/</link>
+              <link>https://docs.oracle.com/javaee/7/api/</link>
+              <link>http://www.javadoc.io/doc/com.google.code.findbugs/jsr305/${jsr305.version}</link>
+              <link>http://docs.jboss.org/hibernate/beanvalidation/spec/2.0/api/</link>
+              <link>http://docs.jboss.org/hibernate/validator/6.0/api/</link>
               <link>https://www.slf4j.org/apidocs/</link>
               <link>http://junit.org/junit4/javadoc/${junit.version}/</link>
               <link>http://commons.apache.org/proper/commons-lang/javadocs/api-${commons.lang3.version}/</link>
               <link>http://commons.apache.org/proper/commons-collections/javadocs/api-release/</link>
               <link>http://docs.swagger.io/swagger-core/v1.5.0/apidocs/</link>
-              <link>http://docs.spring.io/spring/docs/4.3.x/javadoc-api/</link>
-              <link>http://docs.spring.io/spring-boot/docs/1.5.x/api/</link>
+              <link>https://docs.spring.io/spring/docs/5.1.x/javadoc-api/</link>
+              <link>https://docs.spring.io/spring-boot/docs/2.1.x/api/</link>
             </links>
             <show>protected</show>
             <splitindex>true</splitindex>
@@ -566,19 +566,21 @@
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
     </dependency>
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
     </dependency>
-    <!--
       <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-devtools</artifactId>
       <scope>runtime</scope>
       </dependency>
-    -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
@@ -603,10 +605,6 @@
       <groupId>org.web3j</groupId>
       <artifactId>web3j-maven-plugin</artifactId>
       <version>${web3j.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-devtools</artifactId>
     </dependency>
   </dependencies>
 </project>

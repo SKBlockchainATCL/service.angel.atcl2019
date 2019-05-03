@@ -8,6 +8,11 @@ credit:
   - Lim
   - Yang
 
+spring.security:
+  user:
+    name: boot
+    password: boot
+
 management:
   server:
     address: '127.0.0.1'
