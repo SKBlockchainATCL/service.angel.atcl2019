@@ -22,8 +22,8 @@ public class Application{
    }
 
    @Bean
-   public Web3j ethereum(@Value("${ethereumNetworks.local.address}") @NotEmpty String addr,
-         @Value("${ethereumNetworks.local.port}") @Positive int port) {
+   public Web3j ethereum(@Value("${ethereum.networks.local.address}") @NotEmpty String addr,
+         @Value("${ethereum.networks.local.port}") @Positive int port) {
       return this.buildWeb3j("http", addr, port);
    }
 

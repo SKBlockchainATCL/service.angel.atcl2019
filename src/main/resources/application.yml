@@ -8,21 +8,23 @@ credit:
   - Lim
   - Yang
 
+server:
+  address: '127.0.0.1'
+  port: 8080
+
 spring.security:
   user:
     name: boot
     password: boot
 
 management:
-  server:
-    address: '127.0.0.1'
-    port: 8088
   endpoints:
     web:
       exposure:
         include: '*'
 
-ethereumNetworks:
-  local:
-    address: '127.0.0.1'
-    port: 8555
+ethereum:
+  networks:
+    local:
+      address: '127.0.0.1'
+      port: 8555
