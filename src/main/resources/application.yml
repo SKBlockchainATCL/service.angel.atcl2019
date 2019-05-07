@@ -8,6 +8,12 @@ credit:
   - Lim
   - Yang
 
+debug: false
+trace: false
+
+logging.level:
+  org.springframework.boot.autoconfigure: ERROR
+
 server:
   address: '127.0.0.1'
   port: 8080
@@ -26,5 +32,7 @@ management:
 ethereum:
   networks:
     local:
+      netVersion: 37
       address: '127.0.0.1'
       port: 8555
+      

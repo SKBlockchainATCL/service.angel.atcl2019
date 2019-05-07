@@ -1,12 +1,7 @@
 package atcl2019.angel.util;
 
-import java.util.List;
-import java.util.ArrayList;
-import java.util.Map;
-import java.util.HashMap;
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import javax.annotation.concurrent.ThreadSafe;
+import org.apache.commons.lang3.Validate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -27,6 +22,10 @@ public abstract class AbstractEthereumContract{
 
 
    public AbstractEthereumContract(@Nonnull final Web3j ethereum) {
+      Validate.isTrue(ethereum != null);
+
       this.ethereum = ethereum;
+
+      logger.info("Binded Ethereum client.");
    }
 }

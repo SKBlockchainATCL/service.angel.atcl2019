@@ -102,9 +102,22 @@ truffle(local)> web3.eth.getBlockNumber()
 
 @TODO
 
+### Using OpenZeppelin
+
+@TODO
+
+### Desining REST API
+
+@TODO
+
+### Programming Server Application Using Spring Boot
+
+@TODO
+
 ### References
 
 * [`web3.js` 1.0 API](https://web3js.readthedocs.io/en/1.0/)
 * [Truffle Documentation](https://truffleframework.com/docs/truffle/overview)
 * [Truffle Configuration](https://truffleframework.com/docs/truffle/reference/configuration)
 * [Truffle Commands](https://truffleframework.com/docs/truffle/reference/truffle-commands)
+
