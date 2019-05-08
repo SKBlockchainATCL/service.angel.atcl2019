@@ -26,23 +26,23 @@ public class Application{
    }
 
    @Bean
-   public Web3j ethereum(@Value("${ethereum.networks.local.address}") @NotEmpty String addr,
-         @Value("${ethereum.networks.local.port}") @Positive int port,
-         @Value("${ethereum.networks.local.port}") @NotEmpty String netVersion) {
-      return this.buildWeb3j("http", addr, port, netVersion);
+   public Web3j ethereum(@Value("${ethereum.host}") @NotEmpty String host,
+         @Value("${ethereum.port}") @Positive int port,
+         @Value("${ethereum.netVersion}") @NotEmpty String netVersion) {
+      return this.buildWeb3j("http", host, port, netVersion);
    }
 
 
-   private Web3j buildWeb3j(@NotEmpty String protocol, @NotEmpty String addr, int port, @NotEmpty String netVersion) {
-      Web3j instance = Web3j.build(new HttpService(String.format("%s://%s:%d", protocol, addr, port)));
+   private Web3j buildWeb3j(@NotEmpty String protocol, @NotEmpty String host, int port, @NotEmpty String netVersion) {
+      Web3j instance = Web3j.build(new HttpService(String.format("%s://%s:%d", protocol, host, port)));
 
-      logger.info("Ethereum connector is created for {}://{}:{}", protocol, addr, port);
+      logger.info("Ethereum connector is created for {}://{}:{}", protocol, host, port);
 
       try {
         validateEthereumNetVersion(instance, netVersion);
-        logger.info("Successfully validate the network ID of the specified Ethereum at {}://{}:{}", protocol, addr, port);
+        logger.info("Successfully validate the network ID of the specified Ethereum at {}://{}:{}", protocol, host, port);
       } catch(Exception ex) {
-        logger.warn(String.format("Fail to validate network ID of the specified Ethereum at %s://%s:%d", protocol, addr, port), ex);
+        logger.warn(String.format("Fail to validate network ID of the specified Ethereum at %s://%s:%d", protocol, host, port), ex);
       }
 
       return instance;
