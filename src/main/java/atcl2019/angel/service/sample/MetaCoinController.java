@@ -1,6 +1,8 @@
 package atcl2019.angel.service.sample;
 
+import java.math.BigInteger;
 import javax.annotation.Nonnull;
+import javax.validation.constraints.NotBlank;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,8 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/samples/metacoin",
-   produces = {MediaType.APPLICATION_JSON_UTF8_VALUE},
-   consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+   produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
 public class MetaCoinController{
 
 
@@ -24,8 +25,9 @@ public class MetaCoinController{
 
 
   @GetMapping(value = "/balance/{address}")
-  public Double getBalance(@PathVariable("address") String address) {
-    return Double.valueOf(0.0);
+  public BigInteger getBalance(@PathVariable("address") @NotBlank String addr) {
+
+    return this.service.getBalance(addr);
   }
 
 
