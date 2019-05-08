@@ -5,14 +5,14 @@ require("babel-register")({
 });
 
 const HDWalletProvider = require("truffle-hdwallet-provider");
-const mnemonic = "hell bent for leather";
 
-//const fs = require('fs');
-
-//const accounts = fs.readFileSync('run/accounts').toString().split('\n');
-//const config = fs.readFileSync('scripts/quorum/solo/config.sh').toString();
-//const rpcPort = config.match(/\[rpcport\]=[0-9]*/g)[0].substring(10);
-//const networkId = config.match(/\[networkid\]=[0-9]*/g)[0].substring(12);
+// Read properties for local standalone network from 'src/main/resources/application-default.properties' file.
+const fs = require('fs');
+const props = fs.readFileSync('src/main/resources/application-default.properties').toString();
+const netVersion = props.match(/ethereum\.netVersion=.*/g)[0].substring(20);
+const host = props.match(/ethereum\.host=.*/g)[0].substring(14);
+const port = props.match(/ethereum\.port=.*/g)[0].substring(14);
+const from = props.match(/ethereum\.from=.*/g)[0].substring(14);
 
 /*
  * References
@@ -27,10 +27,10 @@ module.exports = {
 
    networks: {
       development: {
-         host: "127.0.0.1",
-         port: 8555,
-         network_id: 37,
-         from: "0xc5776c5d4ba76dd38424a160927c6b7054b55edd",
+         host: host,
+         port: port,
+         network_id: netVersion,
+         from: from,
          gas: 0x40000
       },
    },

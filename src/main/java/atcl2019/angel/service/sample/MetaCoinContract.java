@@ -36,11 +36,11 @@ public class MetaCoinContract extends AbstractEthereumContract{
   @Autowired
   public MetaCoinContract(Web3j ethereum, @Value("${contract.MetaCoin.address}") String addr){
     super(ethereum, addr);
-
   }
 
   public BigInteger getBalance(@NotBlank final String addr) {
     //@TODO Check wether or not Function is thread-safe
+    logger.debug("Calling MetaCoin.getBalance({})", addr);
 
     final Function func = new Function("getBalance",
         Arrays.asList(new Address(addr)),
@@ -62,9 +62,5 @@ public class MetaCoinContract extends AbstractEthereumContract{
       if(ex instanceof RuntimeException) throw (RuntimeException)ex;
       else throw new RuntimeException(ex);
     }
-
-
   }
-
-
 }

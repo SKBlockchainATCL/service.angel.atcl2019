@@ -3,7 +3,7 @@
 | Software | Min Version | Recommanded Version | Remarks |
 | -------- | ----------- | ------------------- | ------- |
 | JDK      | 9           |                     |         |
-| Maven    |             |                     |         |
+| Maven    | 3.3         | 3.6                 |         |
 | Node.js  | 8.9.4       | 10.x ([Download Node.js LTS](https://nodejs.org/en/download/)) |   |
 
 
@@ -11,6 +11,7 @@
 
 | Software | Version | Release Notes | Remarks |
 | -------- | ------- | ------------- | ------- |
+| Spring Boot | 2.1  |               |         |
 | web3.js  | 1.0.0-beta | https://github.com/ethereum/web3.js/releases/tag/v1.0.0-beta.52 |   |
 | solc-js  | 0.5.4 | https://github.com/ethereum/solc-js/releases/tag/v0.5.4
 | Truffle  | 5.0.14  | https://github.com/trufflesuite/truffle/releases/tag/v5.0.14 | Ganache Core 2.5.5  |
@@ -86,7 +87,7 @@ For Windows, you should use `truffle.cmd` instead of `truffle` even though you a
 
 ~~~bash
 
-service.angel.atcl2019>truffle.cmd console --network local
+service.angel.atcl2019$ truffle console
 truffle(local)> web3.eth.getNodeInfo()
 'EthereumJS TestRPC/v2.5.5/ethereum-js'
 truffle(local)> web3.eth.getAccounts()
@@ -100,7 +101,56 @@ truffle(local)> web3.eth.getBlockNumber()
 
 ### Compiling, Deploying and Testing Sample Contract
 
-@TODO
+Before using Truffle, required software packages incluing `web3.js` and `truffle` should
+be installed via `npm`.
+
+~~~bash
+service.angel.atcl2019$ npm install
+~~~
+
+Smart contract sources should be located under `src/main/contracts` directory.
+To compile smart contracts, execute `truffle compile` (for Windows `truffle.cmd compile`) at the base directory.
+
+~~~bash
+service.angel.atcl2019$ truffle compile
+~~~
+
+The compiled contract artifacts would be located under `target/contracts` directory.
+Before deploy smart contracts, start local standalone network using Ganache CLI.
+
+~~~bash
+service.angel.atcl2019$ ./scripts/ganache-cli-start.sh
+~~~
+
+To deploy smart contracts into the local standalone network, execute `truffle migrate`
+
+~~~bash
+service.angel.atcl2019$ truffle migrate
+~~~
+
+Before read MetaCoin contract, open Truffle console.
+
+~~~bash
+service.angel.atcl2019$ truffle console
+~~~
+
+Call `MetaCoin.getBalance()`  in the Truffle console.
+
+~~~bash
+truffle(development)> let mc = await MetaCoin.deployed()
+undefined
+truffle(development)> mc.getBalance("0xc5776c5d4ba76dd38424a160927c6b7054b55edd")
+<BN: 2710>
+truffle(development)>
+~~~
+
+#### References
+
+* [Truffle Documentation](https://truffleframework.com/docs/truffle/overview)
+* [Truffle Configuration](https://truffleframework.com/docs/truffle/reference/configuration)
+* [Truffle Commands](https://truffleframework.com/docs/truffle/reference/truffle-commands)
+* [Truffle Contract Abstractions](https://truffleframework.com/docs/truffle/reference/contract-abstractions)
+* [Ganache CLI](https://github.com/trufflesuite/ganache-cli)
 
 ### Using OpenZeppelin
 

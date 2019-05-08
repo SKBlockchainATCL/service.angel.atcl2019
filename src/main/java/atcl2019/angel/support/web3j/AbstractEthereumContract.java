@@ -56,7 +56,7 @@ public abstract class AbstractEthereumContract{
     this.ethereum = ethereum;
     this.address = addr;
 
-    logger.info("Binded Ethereum client and contract address.");
+    logger.info("Created smart contract instance at {}.", addr);
   }
 
   // @TODO Need implementation
