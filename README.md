@@ -164,7 +164,20 @@ truffle(development)>
 
 @TODO
 
+### Troubleshooting
+
+* To solve 'npm ERR! git ... Appears to be a git repo or submodule.' error when running `npm install`, execute the following command
+
+~~~bash
+service.angel.atcl2019$ find node_modules/ -name ".git" -type d | xargs rm -Rf
+~~~
+
+
 ### Tools and Libraries
+
+#### Solidity
+
+* [Solidity Documentation](https://solidity.readthedocs.io/en/latest/)
 
 #### web.js
 
@@ -189,4 +202,8 @@ truffle(development)>
     * The free to use, open source YAKINDU Solidity Tools provides an integrated development environment for ethereum / solidity based smart contracts.
     * Open source(EPL) Eclipse plugin
 
+
+### TODO
+
+* Don't remove the previous data of Ganache CLI whenever it starts up. (`scripts/ganache-cli-start.sh`)
 
