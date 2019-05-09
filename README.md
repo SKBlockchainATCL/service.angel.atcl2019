@@ -164,10 +164,29 @@ truffle(development)>
 
 @TODO
 
-### References
+### Tools and Libraries
+
+#### web.js
 
 * [`web3.js` 1.0 API](https://web3js.readthedocs.io/en/1.0/)
+
+#### Truffle
+
 * [Truffle Documentation](https://truffleframework.com/docs/truffle/overview)
 * [Truffle Configuration](https://truffleframework.com/docs/truffle/reference/configuration)
 * [Truffle Commands](https://truffleframework.com/docs/truffle/reference/truffle-commands)
+
+#### Remix
+
+* [Remix](https://github.com/ethereum/remix-ide)
+    * a browser-based compiler and IDE that enables users to build Ethereum contracts with Solidity language and to debug transactions.
+    * can be used locally
+* [Remix Documentations](https://remix.readthedocs.io/en/latest/)
+
+#### Misc
+
+* [YAKINDU Solidity Tools](https://yakindu.github.io/solidity-ide/)
+    * The free to use, open source YAKINDU Solidity Tools provides an integrated development environment for ethereum / solidity based smart contracts.
+    * Open source(EPL) Eclipse plugin
+
 
