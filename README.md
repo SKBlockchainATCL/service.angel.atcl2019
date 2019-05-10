@@ -83,7 +83,8 @@ Listening on 127.0.0.1:8555
 
 #### Exploring local Ganache CLI instance
 
-For Windows, you should use `truffle.cmd` instead of `truffle` even though you are using Git Bash.
+For Windows, you should use `truffle.cmd` instead of `truffle`.
+But if you use `Git Bash`, you can use `truffle` even on Windows.
 
 ~~~bash
 

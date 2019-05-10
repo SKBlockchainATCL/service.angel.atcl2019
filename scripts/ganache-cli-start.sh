@@ -3,8 +3,10 @@
 readonly script_dir=$(cd `dirname $0` && pwd)
 readonly data_dir=${script_dir}/../run/ganachecli/data
 
-rm -Rf "${data_dir}"
-mkdir -p "${data_dir}"
+if [ ! -d "${data_dir}" ]; then
+  echo "Created data direcotry onto '${data_dir}'"
+  mkdir -p "${data_dir}"
+fi  
 
 cd "${script_dir}"
 
