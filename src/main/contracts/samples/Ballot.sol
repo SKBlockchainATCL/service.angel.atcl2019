@@ -18,7 +18,7 @@ contract Ballot is Ownable{
     
     struct Voter {
         uint weight;
-        bool boted;
+        bool voted;
         address delegate;
         uint vote;
     }
@@ -37,9 +37,37 @@ contract Ballot is Ownable{
     }
     
     function giveRightToVote(address voter) public onlyOwner{
-        
-        
         voters[voter].weight = 1;
+        require(!voters[voter].voted, "This voter already voted.");
+        require(voters[voter].weight == 0);
+        voters[voter].weight = 1;
+    }
+    
+    // @TODO How to controll the concurrency between this function and 'vote' function
+    //       What if during 'delegate' function to addr1 and 'vote' function for addr1 proceed concurrently.
+    //       Is locking necessary?
+    function deletgate(address to) public {
+        // validate self-delegation
+        require(to != msg.sender, "Self-delegation is disallowed");
+
+        // vaidate already voted
+        Voter storage sender = voters[msg.sender];
+        require(!sender.voted, "You already voted");
+        
+        while(voters[to].delegate != address(0)){
+            to = voters[to].delegate;
+            require(to != msg.sender, "Found loop in delegation.");
+        }
+        
+        sender.voted = true;
+        sender.delegate = to;
+        Voter storage delegated = voters[to];
+        if(delegated.voted){
+            proposals[delegated.vote].voteCount += sender.weight;
+        } else{
+            //@TODO What if the 'vote' for 'to' address has completed right here.
+            delegated.weight += delegated.weight;
+        }
     }
     
 }

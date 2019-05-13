@@ -197,6 +197,11 @@ service.angel.atcl2019$ find node_modules/ -name ".git" -type d | xargs rm -Rf
     * can be used locally
 * [Remix Documentations](https://remix.readthedocs.io/en/latest/)
 
+####OpenZeppelin
+
+* [OpenZeppelin Guides](https://docs.openzeppelin.org/docs/get-started.html)
+* [OpenZeppelin API](https://docs.openzeppelin.org/docs/crowdsale_crowdsale)
+
 #### Misc
 
 * [YAKINDU Solidity Tools](https://yakindu.github.io/solidity-ide/)
