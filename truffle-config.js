@@ -4,6 +4,7 @@ require("babel-register")({
   "plugins" : [ "syntax-async-functions", "transform-regenerator" ]
 });
 
+const mnemonic = "";
 const HDWalletProvider = require("truffle-hdwallet-provider");
 
 // Read properties for local standalone network from
