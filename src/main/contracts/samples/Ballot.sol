@@ -1,7 +1,9 @@
 pragma solidity >=0.4.22 <0.7.0;
 //https://solidity.readthedocs.io/en/develop/solidity-by-example.html
 
-contract Ballot {
+import "openzeppelin-solidity/contracts/ownership/Ownable.sol";
+ 
+contract Ballot is Ownable{
     
     
     struct Proposal {
@@ -34,7 +36,7 @@ contract Ballot {
         
     }
     
-    function giveRightToVote(address voter) public{
+    function giveRightToVote(address voter) public onlyOwner{
         
         
         voters[voter].weight = 1;

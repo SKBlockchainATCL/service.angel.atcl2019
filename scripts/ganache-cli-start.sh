@@ -3,6 +3,32 @@
 readonly script_dir=$(cd `dirname $0` && pwd)
 readonly data_dir=${script_dir}/../run/ganachecli/data
 
+options=$(getopt -o r --long "refresh" --name 'ganache-cli-start-options' -- "$@");
+
+if [ $? -ne 0 ]; then
+  command=${0##*/}
+  echo "Unable to parse command line, which expect '$command [-r|--refresh]'."
+  echo ""
+  exit 300
+fi
+
+eval set -- "$options"
+
+declare refreshes=0  # false
+while true; do
+  case "$1" in
+    -r | --refresh )
+      refreshes=1
+      shift ;;
+    -- ) shift; break ;;
+   esac
+done
+
+if [ $refreshes -eq 1 ]; then
+  echo "Removing all the current data under '${data_dir}'"
+  rm -Rf "${data_dir}"
+fi 
+
 if [ ! -d "${data_dir}" ]; then
   echo "Created data direcotry onto '${data_dir}'"
   mkdir -p "${data_dir}"

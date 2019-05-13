@@ -1,0 +1,14 @@
+{
+  "name": "contracts.service.angel.atcl2019",
+  "version": "0.1.0",
+  "//": [
+    "https://truffleframework.com/docs/truffle/getting-started/installation",
+    "https://truffleframework.com/docs/truffle/getting-started/package-management-via-ethpm"
+  ],
+  "engines": {
+    "node": ">=8.9.4"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^2.2.0"
+  }
+}
