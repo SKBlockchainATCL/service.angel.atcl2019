@@ -48,10 +48,13 @@ cd "${script_dir}"
 #   - 0xbbd0e1d8507416b8c64e88f63b4534969b9d88e4a79ebc67f4abff122f28cfb7
 #   - 0xf8c91da1e73f5601a25cbffdac303138ffac30eeeda2680f1853b6ce325ac01b
 #   - 0x572775a6686f4b5d3b26c46133e7419e97b88b5ba1db9e0f5d3ff9a109916a47
+# Options
+#   - gasLimit : The block gas limit (defaults to 0x6691b7)
+#   - gasPrice: The price of gas in wei (defaults to 20000000000)
 ganache-cli --networkId 37 \
-            --port 8555 \
+            --port 8070 \
             --gasPrice 20000000000 \
-            --gasLimit 900000 \
+            --gasLimit 7000000 \
             --mnemonic "in rock machine head the dark side of the moon third stage" \
             --accounts 3 \
             --secure --unlock 0 --unlock 1 --unlock 2 \

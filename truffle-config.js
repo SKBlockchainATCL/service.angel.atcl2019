@@ -34,7 +34,8 @@ module.exports = {
       port : port,
       network_id : netVersion,
       from : from,
-      gas : 0x40000
+      gas : 6000000, // Gas limit used for deploys.
+      gasPrice : 10000000000 // Gas price used for deploys
     },
   },
 
