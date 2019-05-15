@@ -167,12 +167,21 @@ truffle(development)>
 
 ### Troubleshooting
 
+#### Git Repository among Node Modules
+
 * To solve 'npm ERR! git ... Appears to be a git repo or submodule.' error when running `npm install`, execute the following command
+
+* To remove Git repository under local node modules
 
 ~~~bash
 service.angel.atcl2019$ find node_modules/ -name ".git" -type d | xargs rm -Rf
 ~~~
 
+* To remove Git repository under global node modules for Windows, when using Git Bash.
+
+~~~bash
+service.angel.atcl2019$ find $APPDATA/npm/node_modules/ -name ".git" -type d | xargs rm -Rf
+~~~
 
 ### Tools and Libraries
 
@@ -197,7 +206,7 @@ service.angel.atcl2019$ find node_modules/ -name ".git" -type d | xargs rm -Rf
     * can be used locally
 * [Remix Documentations](https://remix.readthedocs.io/en/latest/)
 
-####OpenZeppelin
+#### OpenZeppelin
 
 * [OpenZeppelin Guides](https://docs.openzeppelin.org/docs/get-started.html)
 * [OpenZeppelin API](https://docs.openzeppelin.org/docs/crowdsale_crowdsale)
@@ -211,5 +220,5 @@ service.angel.atcl2019$ find node_modules/ -name ".git" -type d | xargs rm -Rf
 
 ### TODO
 
-* Don't remove the previous data of Ganache CLI whenever it starts up. (`scripts/ganache-cli-start.sh`)
+* (DONE) ~~Don't remove the previous data of Ganache CLI whenever it starts up. (`scripts/ganache-cli-start.sh`)~~
 
